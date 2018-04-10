@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<button type="button" id="btn" name="btn" value="verygood">VERY GOOD</button>
+	<button type="button" id="btn" name="btn" value="good">GOOD</button>
+	<button type="button" id="btn" name="btn" value="normal">NORMAL</button>
+	<button type="button" id="btn" name="btn" value="bad">BAD</button>
+	<button type="button" id="btn" name="btn" value="verybad">VERY BAD</button>
+
+	<script>
+		$(function(){
+			$('button').click(function() {
+				var choice = $(this).val();
+				getpoint(choice);
+			})
+
+		});
+
+
+		function getpoint (cc){
+			$.getJSON('data3.json',function(data){
+					if(cc === 'verygood'){
+						addpoint(data.verygood,cc);
+					}else if(cc === 'good'){
+						addpoint(data.good,cc);
+					}else if(cc === 'normal'){
+						addpoint(data.normal,cc);
+					}else if(cc === 'bad'){
+						addpoint(data.bad,cc);
+					}else if(cc === 'verybad'){
+						addpoint(data.verybad,cc);
+					}
+			});
+		}
+
+
+
+		// function getpoint(cc){
+		// 	$.getJSON('data.json', function(data) {
+		// 		//console.log(choice);
+		// 		// myItems = data.items;
+		// 		// console.log(myItems);
+		// 		$.each(data.choice, function(key, val) {
+		// 			if(cc === 'verygood'){
+		// 				addpoint(val.verygood,cc);
+		// 			}else if(cc === 'good'){
+		// 				addpoint(val.good,cc);
+		// 			}else if(cc === 'normal'){
+		// 				addpoint(val.normal,cc);
+		// 			}else if(cc === 'bad'){
+		// 				addpoint(val.bad,cc);
+		// 			}else if(cc === 'verybad'){
+		// 				addpoint(val.verybad,cc);
+		// 			}	
+		// 		});
+		// 	});
+		// }
+
+		function addpoint(point,cc){
+			console.log(point,cc);
+		}
+	</script>	
+</body>
+
+</html>

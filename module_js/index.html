@@ -12,29 +12,37 @@
 	<button type="button" id="btn" name="btn" value="verybad">VERY BAD</button>
 
 	<script>
+		var point = [];
 		$(function(){
 			$('button').click(function() {
 				var choice = $(this).val();
 				getpoint(choice);
 			})
-
 		});
 
 
 		function getpoint (cc){
 			$.getJSON('data3.json',function(data){
-					if(cc === 'verygood'){
-						addpoint(data.verygood,cc);
-					}else if(cc === 'good'){
-						addpoint(data.good,cc);
-					}else if(cc === 'normal'){
-						addpoint(data.normal,cc);
-					}else if(cc === 'bad'){
-						addpoint(data.bad,cc);
-					}else if(cc === 'verybad'){
-						addpoint(data.verybad,cc);
-					}
-			});
+					// if(cc === 'verygood'){
+					// 	addpoint(data.verygood,cc);
+					// }else if(cc === 'good'){
+					// 	addpoint(data.good,cc);
+					// }else if(cc === 'normal'){
+					// 	addpoint(data.normal,cc);
+					// }else if(cc === 'bad'){
+					// 	addpoint(data.bad,cc);
+					// }else if(cc === 'verybad'){
+					// 	addpoint(data.verybad,cc);
+					// }
+
+					point.push(data.verygood);
+					point.push(data.good);
+					point.push(data.normal);
+					point.push(data.bad);
+					point.push(data.verybad);
+					console.log(point);		
+				});
+			
 		}
 
 

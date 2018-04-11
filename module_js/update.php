@@ -42,11 +42,15 @@
 //$jsonString = fill_get_contents('data2.json');
 $data = json_decode(file_get_contents('data3.json'));
 print_r($data);
-
+$data->verygood = 8;
+echo '</br>'. $data->verygood.'</br>';
 
 // Encode and save!
-// $newJsonString = json_encode($data);
-// file_put_contents('data2.json', $newJsonString);
+$newJsonString = json_encode($data);
+file_put_contents('data3.json', $newJsonString);
+
+$data = json_decode(file_get_contents('data3.json'));
+print_r($data);
 
 // $newJsonString = json_encode($data);
 // file_put_contents('jsonFile.json', $newJsonString);

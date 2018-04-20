@@ -85,6 +85,44 @@
 				</div>
 			</div>
 		</div>
+
+
+		<!-- Button trigger modal -->
+<!-- 		<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+			Launch demo modal
+		</button> -->
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Login</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal">
+							<div class="form-group">
+								<label class="col-sm-2 control-label">Username</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="inputuser" placeholder="Username" required=""> 
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="inputPassword" class="col-sm-2 control-label">Password</label>
+								<div class="col-sm-10">
+									<input type="password" class="form-control" id="inputPassword" placeholder="Password" required="">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- jQuery 2.2.3 -->
 		<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
 		<!-- Bootstrap 3.3.6 -->
@@ -94,72 +132,16 @@
 		<!-- CHART.JS -->
 		<script src="plugins/chartjs/Chart.min.js"></script>
 		<!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"	async defer></script> -->
+		<script src="bar.js"></script>
+		<!-- Sweet Alert -->
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		<script>
 			$(function(){
-				$('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
-					checkboxClass: 'icheckbox_minimal-blue',
-					radioClass: 'iradio_minimal-blue'
-				});
-	//--------------
-	//---- DATA ----
-	//--------------
-	var areaChartData = {
-		labels: ["January", "February", "March", "April", "May"],
-		datasets: [
-		{
-			label: "TEST",
-			fillColor: "rgba(210, 214, 222, 1)",
-			strokeColor: "rgba(210, 214, 222, 1)",
-			pointColor: "rgba(210, 214, 222, 1)",
-			pointStrokeColor: "#c1c7d1",
-			pointHighlightFill: "#fff",
-			pointHighlightStroke: "rgba(220,220,220,1)",
-			data: [65, 59, 80, 81, 56]
-		}
-		]
-	};
-    //-------------
-    //- BAR CHART -
-    //-------------
-    var barChartCanvas = $("#barChart").get(0).getContext("2d");
-    var barChart = new Chart(barChartCanvas);
-    var barChartData = areaChartData;
-    // barChartData.datasets[1].fillColor = "#00a65a";
-    // barChartData.datasets[1].strokeColor = "#00a65a";
-    // barChartData.datasets[1].pointColor = "#00a65a";
-    var barChartOptions = {
-      //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
-      scaleBeginAtZero: true,
-      //Boolean - Whether grid lines are shown across the chart
-      scaleShowGridLines: true,
-      //String - Colour of the grid lines
-      scaleGridLineColor: "rgba(0,0,0,.05)",
-      //Number - Width of the grid lines
-      scaleGridLineWidth: 1,
-      //Boolean - Whether to show horizontal lines (except X axis)
-      scaleShowHorizontalLines: true,
-      //Boolean - Whether to show vertical lines (except Y axis)
-      scaleShowVerticalLines: true,
-      //Boolean - If there is a stroke on each bar
-      barShowStroke: true,
-      //Number - Pixel width of the bar stroke
-      barStrokeWidth: 2,
-      //Number - Spacing between each of the X value sets
-      barValueSpacing: 5,
-      //Number - Spacing between data sets within X values
-      barDatasetSpacing: 1,
-      //String - A legend template
-      legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
-      //Boolean - whether to make the chart responsive
-      responsive: true,
-      maintainAspectRatio: true
-  };
-  barChartOptions.datasetFill = false;
-  barChart.Bar(barChartData, barChartOptions);
-});
+				// $('#myModal').modal('show');
+			});
 			function makeaction(){
 				$('#btn_submit').removeAttr('disabled');
-			}		
+			}	
 		</script>
 	</body>
 	</html>

@@ -1,24 +1,14 @@
-<html>
-  <head>
-    <title>reCAPTCHA demo: Explicit render after an onload callback</title>
-    
-  </head>
-  <body>
-    <form action="" method="POST">
-      <div class="g-recaptcha" data-callback="makeaction" data-sitekey="6Ldxt1MUAAAAAA4qwSd2nu-teoeMzVyCfKtxzI8T"></div>
-      <br>
-      <input type="submit" id="btn_submit" name="btn_submit" value="Submit" disabled="">
-    </form>
-    <script src='https://www.google.com/recaptcha/api.js?hl=th'></script>
-    <script src='plugins/jquery/jquery-2.2.3.min.js'></script>
-    <script>
-      $(function(){
-
-      }); 
-
-      function makeaction(){
-        $('#btn_submit').removeAttr('disabled');
-      }
-    </script>
-  </body>
-</html>
+<?php 
+$options = [
+    'cost' => 11,
+    //'salt' => mcrypt_create_iv(22, MCRYPT_DEV_URANDOM),
+];
+//echo password_hash("p@ssw0rd", PASSWORD_BCRYPT, $options);
+$password = 'p@ssw0rd';
+$encrypt = '$2y$11$fOUqFV07/ADjaX2FJZ4qr.euWIBh5RAsvrl3pvRitwmH7COSC.X8C';
+if(password_verify($password,$encrypt)){
+  echo 'pass correct';
+}else{
+  echo 'pass not correct';
+}
+?>

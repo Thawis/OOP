@@ -1,67 +1,70 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSPINIA | Empty Page</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="../css/animate.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
-</head>
+<?php 
+require_once '../config/core.php';
+require_once '../config/database.php';
+require_once '../inc/header.php';
+require_once '../object/product.php'; 
 
-<body class="">
+$database = new Database();
+$db = $database->getConnection();
 
-    <div id="wrapper">
-
-		<?php require_once 'top-menu.php' ?>
-		<?php require_once 'top-bar.php' ?>
+$product = new Product($db);
+$stmt = $product->readAll($from_record_num,$records_per_page);
+$total_rows = $stmt->rowCount();
+?>
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-sm-4">
+        <h2>This is main title</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">หน้าหลัก</a>
+            </li>
+            <li class="active">
+                <strong>รายการสินค้า</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+   <div class="row">
+     <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Product List</h5>
         </div>
-            <div class="row wrapper border-bottom white-bg page-heading">
-                <div class="col-sm-4">
-                    <h2>This is main title</h2>
-                    <ol class="breadcrumb">
-                        <li>
-                            <a href="index.html">This is</a>
-                        </li>
-                        <li class="active">
-                            <strong>Breadcrumb</strong>
-                        </li>
-                    </ol>
-                </div>
-                <div class="col-sm-8">
-                    <div class="title-action">
-                        <a href="" class="btn btn-primary">This is action area</a>
-                    </div>
-                </div>
-            </div>
+        <div class="ibox-content">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Detail</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php while($result = $stmt->fetch()){ ?>
+                    <tr>
+                        <td><?=$number?></td>
+                        <td><?=$result['P_Name']?></td>
+                        <td><?=$result['P_Price']?></td>
+                        <td><?=$result['P_ID']?></td>
+                    </tr>
+                    <?php $number++; }?>
+                </tbody>
+            </table>
 
-            <div class="wrapper wrapper-content">
-            	test
+            <div class="btn-group">
+                <button type="button" class="btn btn-white"><i class="fa fa-chevron-left"></i></button>
+                <button class="btn btn-white">1</button>
+                <button class="btn btn-white  active">2</button>
+                <button class="btn btn-white">3</button>
+                <button class="btn btn-white">4</button>
+                <button type="button" class="btn btn-white"><i class="fa fa-chevron-right"></i> </button>
             </div>
-            <div class="footer">
-                <div class="pull-right">
-                    10GB of <strong>250GB</strong> Free.
-                </div>
-                <div>
-                    <strong>Copyright</strong> Example Company &copy; 2014-2017
-                </div>
-            </div>
-
         </div>
-        </div>
+    </div>                    
+</div>
+</div>
 
-    <!-- Mainly scripts -->
-    <script src="../js/jquery-3.1.1.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="../js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-
-    <!-- Custom and plugin javascript -->
-    <script src="../js/inspinia.js"></script>
-    <script src="../js/plugins/pace/pace.min.js"></script>
+<?php require_once '../inc/footer.php'; ?>
 
 
-</body>
-
-</html>

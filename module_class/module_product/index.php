@@ -51,14 +51,19 @@ $total_rows = $stmt->rowCount();
                     <?php $number++; }?>
                 </tbody>
             </table>
-
-            <div class="btn-group">
-                <button type="button" class="btn btn-white"><i class="fa fa-chevron-left"></i></button>
-                <button class="btn btn-white">1</button>
-                <button class="btn btn-white  active">2</button>
-                <button class="btn btn-white">3</button>
-                <button class="btn btn-white">4</button>
-                <button type="button" class="btn btn-white"><i class="fa fa-chevron-right"></i> </button>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4" style="text-align:right;">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-white"><i class="fa fa-chevron-left"></i></button>
+                        <button class="btn btn-white">1</button>
+                        <button class="btn btn-white">2</button>
+                        <button class="btn btn-white">3</button>
+                        <button class="btn btn-white">4</button>
+                        <button type="button" class="btn btn-white"><i class="fa fa-chevron-right"></i> </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>                    

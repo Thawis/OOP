@@ -4,7 +4,8 @@ require_once 'connection.php';
 
 $sql = "SELECT * FROM dad_news news LEFT JOIN dnn_EasyDNNNewsCategories cat ON cat.ArticleID = news.ArticleID
 LEFT JOIN dnn_EasyDNNNewsCategoryList list ON list.CategoryID = cat.CategoryID
-WHERE cat.CategoryID = 13 AND Active = 1
+WHERE cat.CategoryID = 5 AND Active = 1
+GROUP BY news.ArticleID
 ORDER BY news.PublishDate DESC";
 $stmt = $conn->prepare($sql);
 $stmt->execute();

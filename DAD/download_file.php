@@ -5,7 +5,8 @@ require_once 'connection.php';
 // $name = 'ExampleFile.pdf';
 // $name = 'u1.jpg';
 // $name = '20171027155047094_0001.jpg';
-// $path = 'Upload/doc/'.$name;
+$name = '090515.jpg';
+$path = 'Upload/doc/'.$name;
 
 // if(!$path){
 // 	die('file not found');
@@ -30,12 +31,12 @@ require_once 'connection.php';
 // header("Content-disposition: attachment; filename=".$path);
 // readfile($path);
 
-$sql = "SELECT * FROM news LEFT JOIN file ON news.ArticleID = file.ArticleID
-WHERE news.CategoryID = 4
-ORDER BY news.PublishDate DESC";
+// $sql = "SELECT * FROM news LEFT JOIN file ON news.ArticleID = file.ArticleID
+// WHERE news.CategoryID = 4
+// ORDER BY news.PublishDate DESC";
 
-$stmt = $conn->prepare($sql);
-$stmt->execute();
+// $stmt = $conn->prepare($sql);
+// $stmt->execute();
 
 ?>
 
@@ -45,14 +46,14 @@ $stmt->execute();
 	<title>TEST Download File</title>
 </head>
 <body>
-	<?php
+	<a href="<?=$path?>" download target="_blank">Click here to download</a></br>
+<!-- 	<?php
 		while ($result = $stmt->fetch()) { 
 			$path = $result['File_Path'].$result['File_Name'];
 			$ID = $result['ArticleID'];
 			?>
 		<a href="<?=$path?>" download target="_blank">Click here to download <?=$ID?></a></br>
-	<?php	} ?>
-
+	<?php	} ?> -->
 	<!-- <a href="<?=$path?>" download target="_blank">Click here to download</a> -->
 </body>
 </html>

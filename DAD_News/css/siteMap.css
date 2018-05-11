@@ -1,0 +1,99 @@
+a[href="javascript:void(0)"] {
+    cursor: default !important;
+}
+box-content {
+	
+}
+	ul.siteMap {
+		display: flex;
+	    flex-wrap: wrap;
+        position: relative;
+        padding: 0px;
+	}
+	ul.siteMap:after {
+		content: "";
+	    position: absolute;
+	    left: 0px;
+	    right: 0px;
+	    bottom: 0px;
+	    border-bottom: 1px solid rgb(138, 138, 142);
+	}
+		ul.siteMap > li {
+		    width: 25%;
+	        padding: 30px 0px;
+		    border-bottom: 1px solid rgb(138, 138, 142);
+		}
+			ul.siteMap > li > a {
+				color: #ffffff;
+				font-weight: bold;
+			}
+				ul.siteMap > li > ul > li {
+					position: relative;
+				}
+				ul.siteMap > li > ul > li::before {
+				    content: "";
+				    padding: 3px;
+				    background: #ffffff;
+				    border-radius: 100%;
+			        position: absolute;
+				    left: -15px;
+			        top: 10px;
+				}
+					ul.siteMap > li > ul > li > ul > li {
+						position: relative;
+					}
+						ul.siteMap > li > ul > li > ul > li > ul ul {
+							opacity: 0.8;
+						}
+
+	ul.siteMap ul {
+        padding: 5px 0px 5px 15px;
+	}
+		ul.siteMap ul li {
+			position: relative;
+		}
+		ul.siteMap ul li::before {
+		    content: "-";
+	        position: absolute;
+		    left: -15px;
+	        top: 0px;
+            color: #fff;
+		}
+			ul.siteMap ul li a {
+			    color: #ffffff;
+			}
+			ul.siteMap ul li a:hover {
+			    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+			}
+
+/* ---------------------------------------------------**** Notebook ****--------------------------------------------------- */
+@media only screen and (min-width: 1025px) and (max-width: 1300px) {
+
+	ul.siteMap > li {
+	    width: 33.33%;
+	}
+
+}
+
+/* ---------------------------------------------------**** Tablet ****--------------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+	ul.siteMap > li {
+	    width: 50%;
+	}
+
+}
+
+
+/* ---------------------------------------------------**** Mobile ****--------------------------------------------------- */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+
+	.box-content {
+	    padding: 0px 20px;
+	}
+	ul.siteMap > li {
+	    width: 100%;
+	    padding: 7px 0px;
+	}
+
+}

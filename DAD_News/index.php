@@ -33,7 +33,7 @@ $num_record = $stmt->rowCount();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>INSPINIA | Search Page</title>
+    <title>ประกาศ</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -42,9 +42,7 @@ $num_record = $stmt->rowCount();
     <link href="css/style.css" rel="stylesheet">
 
 </head>
-<body>
-    <?php include_once 'inc/head.php'; ?>
-
+<body class="gray-bg">
     <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
             <div class="col-lg-12">
@@ -54,15 +52,13 @@ $num_record = $stmt->rowCount();
                         <?php while($result = $stmt->fetch()){ ?>           
                         <div class="hr-line-dashed"></div>
                         <div class="search-result">
-                            <h3><a href="#"><?=$result['Title'] ?></a></h3>
-                            <!-- <a href="#" class="search-link">www.inspinia.com/inspinia</a> -->
+                            <h3><a href="detail.php?ID=<?=$result['ArticleID']?>"><?=$result['Title'] ?></a></h3>
                             <p><?=$result['SubTitle'] ?></p>
                         </div>
                         <?php } ?>
                         <!-- ==================================================================== Search Result ==================================================================== -->
 
                         <?php 
-                        // $pages = isset($_GET['page']) ? intval($_GET['page']) : 1; 
                         $total_pages = intval(ceil($total_rows / $perpage));
                         if($num_record > 0 && $total_pages > 1){} 
                             ?>
@@ -70,8 +66,8 @@ $num_record = $stmt->rowCount();
                         <div class="text-center">
                             <div class="btn-group">
                                 <?php if($page > 1){ ?>
-                                <a href="index.php?&page=1" class="btn btn-white"><i class="fa fa-step-backward"></i></a>
-                                <a href="index.php?&page=<?=$page-1?>" class="btn btn-white"><i class="fa fa-chevron-left"></i></a>
+                                <a href="index.php?&page=1" class="btn btn-white"><i class="fa fa-fast-backward"></i></a>
+                                <a href="index.php?&page=<?=$page-1?>" class="btn btn-white"><i class="fa fa-step-backward"></i></a>
                                 <?php } ?>
                                 <?php 
                                 $range = 2;
@@ -93,8 +89,8 @@ $num_record = $stmt->rowCount();
                                 ?>
 
                                 <?php if($page < $total_pages){ ?>
-                                <a href="index.php?&page=<?=$page+1?>" class="btn btn-white"><i class="fa fa-chevron-right"></i></a>
-                                <a href="index.php?&page=<?=$total_pages?>" class="btn btn-white"><i class="fa fa-step-forward"></i></a>
+                                <a href="index.php?&page=<?=$page+1?>" class="btn btn-white"><i class="fa fa-step-forward"></i></a>
+                                <a href="index.php?&page=<?=$total_pages?>" class="btn btn-white"><i class="fa fa-fast-forward"></i></a>
                                 <?php } ?>
                             </div>
                         </div>
@@ -103,14 +99,14 @@ $num_record = $stmt->rowCount();
             </div>
         </div>
     </div>
-    <div class="footer">
+<!--     <div class="footer">
         <div class="pull-right">
             10GB of <strong>250GB</strong> Free.
         </div>
         <div>
             <strong>Copyright</strong> Example Company &copy; 2014-2017
         </div>
-    </div>
+    </div> -->
 
 </div>
 </div>

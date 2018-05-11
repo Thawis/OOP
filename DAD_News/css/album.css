@@ -1,0 +1,115 @@
+.box-body .box-content {
+
+}
+	.box-body .b-album {
+		display: table;
+		width: 100%;
+		padding: 50px 0px;
+	    border-bottom: 1px solid rgba(220, 220, 220, 0.35);
+	}
+		.box-body .b-album .item {
+			width: calc(33.33% - 50px);
+			float: left;
+	        margin: 25px;
+		    position: relative;
+		}
+			.box-body .b-album a {
+				display: block;
+	            max-width: 300px;
+			    margin: auto;
+			    color: #fff;
+			}
+				.box-body .b-album a .img {
+				    background-size: cover;
+				    background-position: center;
+				    background-clip: content-box;
+				    border-radius: 20px;
+			        position: relative;
+			        transition: .5s;
+				    border: 10px solid rgba(255, 255, 255, 0.14);
+				}
+					.box-body .b-album .item a.fancybox .img::before ,
+					.box-body .b-album .item a.fancybox .img::after {
+					    content: "";
+					    position: absolute;
+					    opacity: 0;
+					    transition: .5s;
+					}
+					.box-body .b-album .item a.fancybox .img::before {
+					    background: rgba(0, 0, 0, 0.3);
+					    width: 100%;
+					    height: 100%;
+					    border-radius: 10px;
+					}
+					.box-body .b-album .item a.fancybox .img::after {
+					    content: "\f00e";
+					    font-family: 'FontAwesome';
+					    color: #fff;
+					    top: 50%;
+					    left: 50%;
+					    transform: translate(-50%,-50%);
+					    font-size: 30px;
+					}
+				@media only screen and (min-width: 1025px) {
+					.box-body .b-album .item:hover a.fancybox .img::before ,
+					.box-body .b-album .item:hover a.fancybox .img::after {
+					    opacity: 1;
+					}
+					.box-body .b-album .item:hover a:not(.fancybox) .img {
+					    transform: scale(1.05);
+					}
+				}
+					.box-body .b-album img {
+						width: 100%;
+						display: block;
+						opacity: 0;
+					}
+				.box-body .b-album span {
+				    display: block;
+					margin-top: 7px;
+				}
+				.box-body .b-album h4 {
+				    margin: 0px;
+				    color: #cfb629;
+				    display: -webkit-box;
+				    -webkit-line-clamp: 2;
+				    -webkit-box-orient: vertical;
+				    overflow: hidden;
+				    height: 48px;
+				}
+		
+/* ---------------------------------------------------**** Mobile and Tablet ****--------------------------------------------------- */
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+
+}
+/* ---------------------------------------------------**** Tablet ****--------------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+	@media screen and (orientation:portrait) {
+
+	}
+
+
+}
+
+/* ---------------------------------------------------**** Mobile ****--------------------------------------------------- */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	
+.box-body .b-album {
+    padding: 50px 0px;
+}
+    
+	@media screen and (orientation:portrait) {
+		.box-body .b-album .item {
+		    width: 100%;
+		    margin: 5px 0px;
+		}
+	}
+	@media screen and (orientation:landscape) {
+		.box-body .b-album .item {
+		    width: 50%;
+		    margin: 5px 0px;
+		}
+	}
+
+}

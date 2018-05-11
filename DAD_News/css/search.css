@@ -1,0 +1,38 @@
+.box-body .b-faq .list .b-text{
+	padding: 12px 20px;
+}
+.box-body .b-faq .list .b-text .reply{
+	display: block;
+}
+
+/* ---------------------------------------------------**** Mobile and Tablet ****--------------------------------------------------- */
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+
+
+
+}
+
+/* ---------------------------------------------------**** Tablet ****--------------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+
+}
+
+/* ---------------------------------------------------**** Mobile ****--------------------------------------------------- */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	
+.container-baby {
+	padding: 0px;
+}
+.box-body .b-faq .list .b-text .reply{
+	display: none;
+}
+	@media screen and (orientation:portrait) {
+
+	}
+	@media screen and (orientation:landscape) {
+
+	}
+
+}

@@ -1,0 +1,141 @@
+.box-body .box-content {
+	background: #737375;
+	color: #ffffff;
+}
+	.box-body .box-content > .container {
+		display: flex;	
+		padding: 40px 0px;	
+	}
+		.box-body .box-calendar ,
+		.box-body .box-activity {
+		    padding: 0px 30px;
+		}
+		.box-body .box-calendar {
+		    width: 60%;
+		}
+		.box-body .box-activity {
+		    width: 40%;
+	        border-left: 1px solid rgba(255, 255, 255, 0.17);
+/* 	        margin-bottom: 45px; */
+		}
+			.box-body .box-activity h3 {
+				margin: 0px;
+			}
+				.box-body .box-activity h3 span {
+				    color: #f58813;
+				}
+				
+			.box-body .box-activity .b-list {
+
+			}
+				.box-body .box-activity .b-list .item {
+				    padding-top: 10px;
+				}
+					.box-body .box-activity .b-list .item .list {
+						color: rgba(255, 255, 255, 0.7);
+					    display: flex;
+					    padding: 10px 0px;
+					}
+						.box-body .box-activity .b-list .item .img {
+							overflow: hidden;
+						    margin-right: 17px;
+							width: 120px;
+						    margin-top: 7px;
+						}
+							.box-body .box-activity .b-list .item img {
+								transition: .5s;
+								display: block;
+								width: 100%;
+							}
+							
+						.box-body .box-activity .b-list .item .text {
+					        width: calc(100% - 120px);
+						}
+							.box-body .box-activity .b-list .item h4 {
+							    margin: 0px;
+							    margin-bottom: 8px;
+								color: #ffc24d;
+							    display: -webkit-box;
+							    -webkit-line-clamp: 3;
+							    -webkit-box-orient: vertical;
+							    overflow: hidden;
+							}
+							.box-body .box-activity .b-list .item .Add-Event {
+								color: #ffffff;
+							    font-size: 13px;
+							}
+								.box-body .box-activity .b-list .item .Add-Event::before {
+									content: "";
+								    width: 20px;
+								    height: 20px;
+								    float: left;
+								    background: url(../images/I-Add-Event.png) center left;
+								    background-repeat: no-repeat;
+								    display: none;
+								}
+				.box-body .box-activity .b-list .owl-dots {
+				    bottom: -40px;
+				}
+	
+	.box-body .event-item {
+	    background: #57585d url('../images/BG-foot.jpg') center bottom no-repeat;
+        background-size: 100% auto;
+	}
+		.box-body .event-item > div {
+		    display: table;
+	        padding: 25px 0px;
+    	    border-bottom: 1px solid rgba(255, 255, 255, 0.17);
+	        margin-bottom: -1px;
+		}
+		
+/* ---------------------------------------------------**** Mobile and Tablet ****--------------------------------------------------- */
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+
+}
+/* ---------------------------------------------------**** Tablet ****--------------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+	@media screen and (orientation:portrait) {
+		.box-body .box-calendar, .box-body .box-activity {
+		    width: 100%;
+	        border: 0;
+		    margin: 0px;
+	        padding: 22px 15px;
+		}	
+		.box-body .box-content > .container {
+		    display: block;
+		}
+	}
+
+}
+
+/* ---------------------------------------------------**** Mobile ****--------------------------------------------------- */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+
+.box-body .box-calendar, .box-body .box-activity {
+    width: 100%;
+    padding: 15px;
+}	
+.box-body .box-content > .container {
+    display: block;
+    padding-top: 10px;
+}
+	@media screen and (orientation:portrait) {
+		.cal1 .clndr .clndr-table tr {
+		    height: 64px !important;
+		}
+		.cal1 .clndr .clndr-table tr .day .day-contents {
+		    width: 40px !important;
+		    height: 40px !important;
+		    line-height: 42px !important;
+		}
+		.cal1 .clndr .clndr-table .header-days .header-day {
+		    padding: 20px 4px !important;
+	        transform: rotate(-33deg);
+		}
+	}
+	@media screen and (orientation:landscape) {
+
+	}
+
+}

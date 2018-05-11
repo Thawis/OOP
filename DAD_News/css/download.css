@@ -1,0 +1,133 @@
+.box-body .box-content {
+
+}
+	.box-body .b-download {
+		display: table;
+		width: 100%;
+		padding: 50px 0px 100px 0px;
+	}
+		.box-body .b-download .item {
+			background: #ffffff;
+			width: calc(33.33% - 50px);
+			float: left;
+	        border-radius: 20px;
+	        margin: 25px;
+		    border: 10px solid rgba(255, 255, 255, 0.14);
+		    background-clip: padding-box;
+		    position: relative;
+	        padding-top: 20px;
+		}
+			.box-body .b-download .B-date {
+			    background: #dadfe9;
+			    color: #0d214b;
+			    font-size: 0.7em;
+			    padding: 4px;
+			    padding-top: 5px;
+			    width: 47px;
+			    height: 47px;
+		        border-top: 5px solid #bba31e;
+			    text-align: center;
+			    position: absolute;
+			    right: 10px;
+			    top: 10px;
+			}
+			body.mediumFont .box-body .b-download .B-date {
+		        width: 41px;
+			    height: 41px;
+		        padding-top: 6px;
+			}
+			body.largeFont .box-body .b-download .B-date {
+		        width: 55px;
+			    height: 55px;
+			}
+				.box-body .b-download .B-date b {
+					font-weight: 400;
+				    text-align: center;
+				    font-size: 2.5em;
+				    line-height: 0.7em;
+				    display: block;
+				}
+
+			.box-body .b-download img {
+				margin: auto;
+			    display: block;
+			}
+			.box-body .b-download p {
+		        padding: 0px 15px;
+		        height: 96px;
+			    display: -webkit-box;
+			    -webkit-line-clamp: 4;
+			    -webkit-box-orient: vertical;
+			    overflow: hidden;
+			}
+			body.mediumFont .box-body .b-download p {
+		        height: 76px;
+		    }
+			body.largeFont .box-body .b-download p {
+		        height: 120px;
+		    }
+
+			.box-body .b-download .b-button {
+				background: #e0ad5c;
+				padding: 15px 0px;
+				border-bottom-right-radius: 10px;
+			    border-bottom-left-radius: 10px;
+			}
+				.box-body .b-download .b-button a {
+				    margin: auto;
+			        padding: 3px 20px;
+				    display: table;
+			        background: #ffffff;
+				    color: #ff1e00;
+				}
+				@media only screen and (min-width: 1025px) {
+					.box-body .b-download .b-button a:hover {
+				        background: #b57e31;
+				        color: #ffffff;
+					}
+				}
+.img-book{
+    height: 230px;
+    width: auto;
+    border: 1px solid #f58813;
+}
+
+/* ---------------------------------------------------**** Mobile and Tablet ****--------------------------------------------------- */
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+
+}
+/* ---------------------------------------------------**** Tablet ****--------------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+	@media screen and (orientation:portrait) {
+		.box-body .b-download .item {
+		    background: #ffffff;
+		    width: calc(50% - 50px);
+		}
+	}
+
+
+}
+
+/* ---------------------------------------------------**** Mobile ****--------------------------------------------------- */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	
+.box-body .b-download .item {
+    width: 100%;
+    margin: 5px 0px;
+}
+.box-body .b-download {
+    padding: 50px 0px;
+}
+.box-body .b-download p {
+    height: auto;
+}
+    
+	@media screen and (orientation:portrait) {
+
+	}
+	@media screen and (orientation:landscape) {
+
+	}
+
+}

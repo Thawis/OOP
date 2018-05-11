@@ -1,0 +1,248 @@
+.box-body .box-content {
+
+}
+	.box-body .b-announce {
+		padding: 0px 10px;
+	    padding-bottom: 10px;
+	}
+		.box-body .b-announce .list {
+		
+		}
+		.box-body .b-announce .list:first-child {
+		    padding-top: 30px;
+		    margin-top: 0px !important;
+		}			
+			.box-body .b-announce .list .box-list {
+			    width: 80%;
+			    margin: 20px auto;
+			    position: relative;
+			    border-radius: 10px;
+			    background: #fff;
+			    border: 1px solid #c7c7c7;
+		        overflow: hidden;
+			}
+				.box-body .b-announce .list .b-text {
+				    width: 100%;
+				    padding: 13px 20px;
+				    font-size: 15px;
+				    position: relative;
+			        border-bottom: 1px solid #e5e5e5;
+			        background: #ffc24d;
+				}
+					.box-body .b-announce .list .b-text a {
+					    color: #000000;
+					    transition: .3s;
+					}
+					.box-body .b-announce .list .b-text a:hover {
+					    color: #c56600;
+					}
+					
+				.box-body .b-announce .list .b-text.cursor-pointer {
+				    cursor: pointer;
+				}
+					.box-body .b-announce .list .b-text.cursor-pointer::after {
+					    content: "";
+					    position: absolute;
+					    border: 6px solid transparent;
+					    border-top-color: #333;
+					    display: block;
+					    margin-right: 2px;
+					    right: 10px;
+					    top: calc(50% - 2px);
+					}
+					
+				.box-body .b-announce .list .b-Viewed {
+				    color: #7c7c7c;
+				    padding: 10px 15px;
+				    position: relative;
+				}
+					.box-body .b-announce .list .b-Viewed span {
+					    padding-left: 30px;
+				        font-size: 0.8em;
+				        color: #7c7c7c;
+					    background: url('../images/I-Viewed.png') 5px center;
+					    background-repeat: no-repeat;
+					}
+					.box-body .b-announce .list .b-Viewed span.Created {
+					    background-image: url('../images/I-Created.png');
+					}
+					
+					.box-body .b-announce .list .b-Viewed .box-status {
+				        position: absolute;
+					    padding: 3px 10px;
+					    right: 16px;
+				        bottom: calc(50% - 15px);
+				        color: #fff;
+					    background: #e2be86;
+					}
+					.box-body .b-announce .list .b-Viewed .box-status.status2 {
+					    background: #f58813;
+					}
+				
+				.box-body .b-announce .list .box-download {
+		
+				}
+					.box-body .b-announce .list .box-download .b-List {
+			            width: 100%;
+					    padding: 13px 0px;
+					    color: #7c7c7c;
+					    display: flex;
+						background: #f9fafa;
+						border-top: 1px solid #e0e1e1;
+					}
+					.box-body .b-announce .list .box-download .b-List:nth-child(even) {
+						background: #eceded;
+					}
+						.box-body .b-announce .list .box-download .b-List::before {
+						    content: "";
+					        width: 30px;
+						    height: 37px;
+						    display: block;
+						    background: url(../images/I-pdf.png) no-repeat center;
+						    background-size: contain;
+					        margin: -5px 27px -5px 22px;
+						}
+						
+						.box-body .b-announce .list .box-download .text {
+							width: calc(100% - 250px);
+						    padding-right: 27px;
+					        word-break: break-all;
+					        white-space: nowrap; 
+						    text-overflow: ellipsis; 
+					        overflow: hidden;
+						}
+							
+						.box-body .b-announce .list .box-download .botton {
+						    width: 135px;
+						    font-size: 12px;
+						    text-align: center;
+						    color: #959595;
+						}
+							.box-body .b-announce .list .box-download .botton a {
+				                background: #e2be86;
+							    color: #ffffff;
+							    padding: 3px 0px;
+							    width: 100%;
+							    max-width: 200px;
+							    display: block;
+							    text-align: center;
+							    font-size: 16px;
+							    border-radius: 20px;
+							    margin: 0px auto ;
+							    transition: .5s;
+							}
+						@media only screen and (min-width: 1025px) {
+							.box-body .b-announce .list .box-download .botton a:hover {
+				                background: #b57e31;
+							}		
+						}
+
+.b-Ttitle{
+	float: left;
+	width: calc(100% - 170px);
+}
+	.box-body .b-announce .list .b-Ttitle>a{
+		line-height: 30px;
+		font-size: 18px;
+	}
+.b-Bview{
+	float: right;
+}
+	.box-body .b-announce .list .b-Bview>a.view{
+	    background: #f58813;
+	    color: #ffffff;
+	    padding: 3px 0px;
+	    width: 135px;
+	    display: block;
+	    text-align: center;
+	    font-size: 16px;
+	    border-radius: 20px;
+	    margin: 0px auto;
+	    transition: .5s;
+        margin-right: 17px;		
+	}
+		.box-body .b-announce .list .b-Bview>a.view:hover{
+			background: #b57e31;	
+		}
+
+
+
+
+
+/* ---------------------------------------------------**** Mobile and Tablet ****--------------------------------------------------- */
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+
+	.box-body .b-announce .list .box-list {
+	    width: 100%;
+    }
+
+}
+
+/* ---------------------------------------------------**** Tablet ****--------------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+	@media screen and (orientation:portrait) {
+
+	}
+
+
+}
+
+/* ---------------------------------------------------**** Mobile ****--------------------------------------------------- */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	
+
+    
+	@media screen and (orientation:portrait) {
+		.box-body .b-announce .list .b-Viewed .box-status {
+		    position: initial;
+		    margin-top: 10px;
+            text-align: center;
+		}
+		.box-body .b-announce .list .box-download .b-List::before {
+			display: none;
+		}
+		.box-body .b-announce .list .box-download .b-List .text::before {
+		    content: "";
+		    width: 30px;
+		    height: 37px;
+		    display: block;
+		    background: url(../images/I-pdf.png) no-repeat center;
+		    background-size: contain;
+		    float: left;
+	        margin-top: -5px;
+		    margin-right: 10px;
+		}
+		.box-body .b-announce .list .box-download .text {
+		    width: 100%;
+		    padding: 8px 10px;
+	        word-break: normal;
+            white-space: normal;
+		}	
+		.box-body .b-announce .list .box-download .botton {
+		    width: 100%;
+		}
+		.box-body .b-announce .list .box-download .b-List {
+		    display: block;
+		}
+	}
+	@media screen and (orientation:landscape) {
+
+	}
+	
+.b-Ttitle{
+	float: none;
+	width: 100%
+}
+
+.b-Bview{
+	float: none;
+}
+	.box-body .b-announce .list .b-Bview>a.view{
+		margin: 10px auto 0;
+		width: 200px;
+	}
+	
+	
+
+}

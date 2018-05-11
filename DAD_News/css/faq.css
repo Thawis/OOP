@@ -1,0 +1,117 @@
+.box-body .box-content {
+
+}
+	.box-body .b-faq {
+        border-left: 1px solid rgba(255, 255, 255, 0.17);
+	}
+		.box-body .b-faq .list {
+		
+		}
+		.box-body .b-faq .list:first-child {
+		    padding-top: 30px;
+		    margin-top: 0px !important;
+		}			
+		.box-body .b-faq .list.important {
+			background: #737375;
+			margin-bottom: 25px;
+		    margin-top: -25px;
+		}
+			.box-body .b-faq .list .box-list {
+				width: 80%;
+			    margin: auto;
+		        padding: 0px 25px 25px 25px;
+			    position: relative;
+			}
+			.box-body .b-faq .list.important .box-list::before {
+			    content: "";
+			    width: 35px;
+			    height: 35px;
+			    background: url('../images/I-important.png') center;
+			    background-size: contain;
+			    position: absolute;
+			    left: 25px;
+			    top: 5px;
+			}
+				.box-body .b-faq .list .b-text {
+				    border-radius: 10px;
+				    width: 100%;
+				    background: #fff;
+				    padding: 12px 35px 12px 20px;
+				    font-size: 15px;
+				    position: relative;
+				}
+				.box-body .b-faq .list .b-text.cursor-pointer {
+				    cursor: pointer;
+				}
+				.box-body .b-faq .list.important .box-list .b-text {
+				    margin-left: 45px;
+				    width: calc(100% - 45px);
+				}
+				.box-body .b-faq .list:nth-child(even) .b-text {
+				    background: #8e8e8e;
+				    color: rgba(255, 255, 255, 0.8);
+				}
+					.box-body .b-faq .list .b-text.cursor-pointer::after {
+					    content: "";
+					    position: absolute;
+					    border: 6px solid transparent;
+					    border-top-color: #333;
+					    display: block;
+					    margin-right: 2px;
+					    right: 10px;
+					    top: calc(50% - 2px);
+					}
+					.box-body .b-faq .list .b-text .reply {
+					    margin-top: 10px;
+					    padding-top: 10px;
+					    border-top: 1px solid rgb(220, 168, 85);
+					    display: none;
+					}
+					
+				.box-body .b-faq .list .b-Viewed {
+				    color: #ffffff;
+				    padding-top: 5px;
+				}
+					.box-body .b-faq .list .b-Viewed span {
+					    padding-left: 30px;
+				        font-size: 0.8em;
+					    background: url('../images/I-Viewed.png') 5px center;
+					    background-repeat: no-repeat;
+					}
+					.box-body .b-faq .list .b-Viewed span.Created {
+					    background-image: url('../images/I-Created.png');
+					}
+		
+
+/* ---------------------------------------------------**** Mobile and Tablet ****--------------------------------------------------- */
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+
+	.box-body .b-faq .list .box-list {
+	    width: 100%;
+    }
+
+}
+
+/* ---------------------------------------------------**** Tablet ****--------------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+	@media screen and (orientation:portrait) {
+
+	}
+
+
+}
+
+/* ---------------------------------------------------**** Mobile ****--------------------------------------------------- */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	
+
+    
+	@media screen and (orientation:portrait) {
+
+	}
+	@media screen and (orientation:landscape) {
+
+	}
+
+}

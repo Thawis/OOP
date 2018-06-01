@@ -11,10 +11,18 @@
 // echo $im;
 
 
-// เลือกหน้า
+// -- เลือกหน้า --
 
-$im = new \Imagick(realpath('test.pdf')."[0]");
-$im->setImageFormat( "jpg" );
-header( "Content-Type: image/jpeg" );
-echo $im;
+// $im = new \Imagick(realpath('test.pdf')."[0]");
+// $im->setImageFormat( "jpg" );
+// header( "Content-Type: image/jpeg" );
+// echo $im;
+
+// -- รับค่าจำนวนหน้า pdf --
+
+// $image = new Imagick();
+// $image->pingImage(realpath('test.pdf'));
+// echo $image->getNumberImages();
+
+
 ?>

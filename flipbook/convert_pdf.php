@@ -10,7 +10,10 @@
 // header( "Content-Type: image/jpeg" );
 // echo $im;
 
-$im = new \Imagick(realpath('test.pdf'));
+
+// เลือกหน้า
+
+$im = new \Imagick(realpath('test.pdf')."[0]");
 $im->setImageFormat( "jpg" );
 header( "Content-Type: image/jpeg" );
 echo $im;

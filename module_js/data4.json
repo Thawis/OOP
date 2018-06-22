@@ -1,0 +1,7 @@
+data = {
+	"set1" : {"name":"verygood","point":1},
+	"set2" : {"name":"good","point":1},
+	"set3" : {"name":"normal","point":1},
+	"set4" : {"name":"bad","point":1},
+	"set5" : {"name":"verybad","point":1}
+}

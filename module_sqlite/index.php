@@ -137,7 +137,7 @@
 		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		<script>
 			$(function(){
-				// $('#myModal').modal('show');
+				alert('ggwp');
 			});
 			function makeaction(){
 				$('#btn_submit').removeAttr('disabled');

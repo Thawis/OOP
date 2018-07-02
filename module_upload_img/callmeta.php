@@ -10,5 +10,6 @@ foreach ($exif as $key => $section) {
         echo "$key.$name: $val<br />\n";
     }
 }
-print_r($exif);
+// echo $exif['FILE'];
+// print_r($exif['FILE']['MimeType']);
 ?>
